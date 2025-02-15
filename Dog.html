@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <title>Dog Picker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="bg-container pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center text-center text-md-left">
+                    <h1 class="sizing-an-image-heading">Sizing an Image</h1>
+                    <p class="sizing-an-image-description">Increase the width of an image by clicking the plus button and decrease by clicking the Minus button. For every action, the image increases or decreases by 5px.</p>
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <p class="warning-message" id="warningMessage"></p>
+                    <img src="data:image/png;base64,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" alt="image" id="image">
+                    <p class="image-width">Width: <span class="image-width" id="imageWidth"></span></p>
+                </div>
+                <div class="col-12">
+                    <div class="buttons-container d-flex flex-row shadow m-auto">
+                        <button class="button" id="decrementButton" onclick="onDecrement()">-</button>
+                        <hr class="hr-line" />
+                        <span class="width-in-px">5px</span>
+                        <hr class="hr-line" />
+                        <button class="button" id="incrementButton" onclick="onIncrement()">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
